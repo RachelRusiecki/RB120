@@ -13,6 +13,8 @@ Player
 
 =end
 
+require 'pry'
+
 module Displayable
   def display_welcome_messages
     clear
@@ -347,6 +349,7 @@ class TTTGame
       break if marked_square
     end
     marked_square
+    binding.pry
   end
 
   def offensive_move
