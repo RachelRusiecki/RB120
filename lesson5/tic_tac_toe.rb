@@ -286,7 +286,7 @@ class TTTGame
   end
 
   def check_computer_marker
-    computer.marker = 'X' if human.marker == 'O'
+    computer.marker = 'X' if human.marker.upcase == 'O'
   end
 
   def decide_who_starts?
@@ -349,7 +349,6 @@ class TTTGame
       break if marked_square
     end
     marked_square
-    binding.pry
   end
 
   def offensive_move
